@@ -1,0 +1,416 @@
+
+body{
+  font-family: 'Lato', sans-serif;
+  justify-content: center;
+  background-color: #fafafa;
+  height: 98vh;
+font: #666666;
+}
+
+.dropdown{
+  position: relative;
+  top: 30%;
+  width: 400px;
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 200000;
+
+}
+
+#KS{
+position: relative;
+left: 40px;
+}
+
+.dropdown::before{
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #333;
+  z-index: 100000;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+  padding: 0;
+
+
+
+}
+.dropdown.active::before{
+  top: 35px;
+  transform: rotate(-225deg);
+}
+.dropdown input{
+  position: relative;
+  width: 400px;
+  height: 120%;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+  border: none;
+  outline: none;
+
+  border-radius: 35px;
+  font-size: 1.4em;
+
+}
+
+.dropdown .option{
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  width: 50%;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+  border-radius: 20px;
+overflow: hidden;
+display: none;
+font-size: 1.4em;
+
+}
+.dropdown.active .option{
+  display: block;
+}
+.dropdown .option div{
+  padding: 12px 20px;
+  cursor: pointer;
+}
+.dropdown .option div:hover{
+  background-color: #E6E6E6;
+}
+
+#charset{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.5em;
+  width: 500px;
+  display: flex;
+  top: 35%;
+justify-content: space-around;
+z-index: 100000;
+
+}
+
+input.ck{
+  position: relative;
+  top: -1vh;
+  transform : scale(1.7);
+  padding: 5vw;
+  border-style: solid;
+  margin: 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.17);
+accent-color: rgba(0,0,0,0.17);
+}
+a{
+  position: relative;
+
+}
+#gma{
+  position: relative;
+  height: 70px;
+  width: 400px;
+  top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#start{
+
+
+  border-radius: 35px;
+  background-color: #fff;
+
+  width: 400px;
+  height: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+box-shadow: 0 5px 20px rgba(0,0,0,0.17);
+border: none;
+font-size: 1.7em;
+z-index: 100000;
+
+
+
+}
+#start:hover{
+  top: 39%;
+height: 80px;
+width: 430px
+}
+#start:focus{
+  top: 41%;
+  width: 370px;
+  height: 60px;
+}
+a{
+  text-decoration: none;
+}
+footer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 99.9vh;
+  width: 100vw;
+}
+#footer{
+  position: absolute;
+  background-color: transparent;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  font-size: 2em;
+bottom: 10px;
+left: 10px;
+border: none;
+box-shadow: 0 5px 20px rgba(0,0,0,0.27);
+
+}
+#close{
+position: absolute;
+background-color: transparent;
+height: 60px;
+width: 60px;
+font-size: 1.7em;
+top: 1px;
+right: 1px;
+border: none;
+
+}
+#card{
+  background-color: #fafafa;
+  height: 900px;
+  width: 1000px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.27);
+  border-radius: 2em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+
+    z-index: 300000;
+}
+
+
+
+.menu{
+position: relative;
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  font-size: 2em;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.13);
+  border: none;
+  border-radius: 20%;
+  display: block;
+  padding: 10px;
+
+}
+
+
+
+menu{
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.menuw{
+display: none;
+  background-color: #fafafa;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.27);
+  border-radius: 2em;
+  margin-top: 8%;
+position: absolute;
+    z-index: 200000;
+}
+
+#helpw{
+  position: fixed;
+  margin-top: 0;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+background-color:rgba(0,0,0,0.27);
+right: 0;
+border-radius: 0;
+z-index: 400000;
+}
+
+#boardw{
+height: 85vh;
+width: 98vw;
+  right: -4px;
+  top: 35px;
+}
+
+#setw{
+  height: 500px;
+  width: 500px;
+  right: 20px;
+  top: 35px;
+  z-index: 200000;
+}
+
+.menuw.active{
+  display: block;
+}
+
+.menu.active{
+  background-color: white;
+  z-index: 3000000;
+}
+
+.helph{
+  display: none
+}
+.helph.active{
+  display: block;
+}
+
+#menuh{
+  top: -10px;
+  right: 150px;
+  font-size: 1.3rem;
+  position: absolute;
+  z-index: 400000;
+  width: 500px;
+}
+#dropdownh{
+  top: 0%;
+  left: -80%;
+  font-size: 1.3em;
+  position: absolute;
+  z-index: 400000;
+}
+#checkboxh{
+  top: -60%;
+  left: -62%;
+  font-size: 1.3rem;
+  position: absolute;
+  z-index: 400000;
+}
+#starth{
+  top: 0%;
+  left: -65%;
+  font-size: 1.3em;
+  position: absolute;
+  z-index: 400000;
+}
+#footerh{
+  left: 80px;
+  bottom: 10px;
+  font-size: 1.3em;
+  position: absolute;
+  z-index: 400000;
+}
+
+#arrow{
+  position: absolute;
+display: none;
+}
+
+.arrow.active{
+  display: none !important;
+}
+
+
+@media (max-height: 1300px) {
+#card{
+height: 80vh;
+}
+}
+
+@media (max-width: 1150px) {
+
+  #starth{
+top: -75%;
+left: 23%;
+
+  }
+  #dropdownh{
+    top: -100%;
+    left: 16%;
+
+  }
+  #checkboxh{
+    top: 468%;
+    left: 17%;
+  }
+
+#card{
+height: 80vh;
+width: 95vw;
+}
+#menuh{
+  width: 50vw;
+  text-align: right;
+  right: 90%;
+}
+
+#setw{
+  width: 95vw;
+  height: 85vh;
+  right: 0;
+}
+#footerh{
+  width: 50vw;
+  bottom: 3px;
+}
+#arrow{
+
+  left: -20%;
+  top: 70%;
+  transform: rotate(10deg);
+}
+.arrow.active{
+
+  display: flex !important;
+}
+
+}
+
+@media (min-height: 1200px) {
+
+
+#footer{
+  bottom: 29%;
+  left: 19%
+}
+
+menu{
+  top: 15%;
+  right: 20%;
+}
+
+#boardw{
+  height: 900px;
+  width: 900px;
+  right: 160px;
+}
+
+.h{
+  height: 60%;
+  width: 65%;
+  background-color: #E8E8E8;
+  position: absolute;
+  left: 17.5%;
+  bottom: 27.5%;
+  z-index: -1;
+}
+#footerh{
+  left: 23vw;
+  bottom: 29vh;
+}
+
+}

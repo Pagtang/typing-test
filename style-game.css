@@ -1,0 +1,53 @@
+body{
+height: 100vh;
+width: 100vw;
+}
+#input{
+  display: flex;
+  font-size: 16rem;
+  border: none;
+  height: 400px;
+  width: 200px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+text-align: center;
+}
+.container{
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  width: 200px;
+
+}
+#in{
+  top: 30vh;
+}
+#uc{
+top: 0;
+width: 260px;
+justify-content: space-between;
+}
+#cor{
+  color: green;
+  width: 100px;
+  border:none;
+  font-size: 3em;
+  padding: 0px;
+  text-align: center;
+}
+#uncor{
+  color: red;
+  width: 100px;
+  border:none;
+  font-size: 3em;
+  padding: 0px;
+  text-align: center;
+}
+.delf{
+  left: 0;
+  width: 100vw;
+  position: absolute;
+  top: 25vh;
+}

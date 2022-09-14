@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+<meta charset="utf-8">
+<title>tt-test</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+<body id="bd" style=""  >
+
+
+<script src="script-share.js" charset="utf-8"></script>
+
+<!-- dropdown select time window  -->
+<div class="dropdown" id="dropdown" onclick="">
+  <p class="helph" id="dropdownh" style="">choose duracy of the test here  </p>
+  <!-- dropdown textbox with chosen informations -->
+<input type="text" class="textbox" id="txt" value="" placeholder="     select the test duration" readonly>
+<!-- options for dropdown select -->
+<div class="option">
+<div onclick= "show('   1 minute')" >1 minute</div>
+<div onclick="show('   2 minutes')" >2 minutes</div>
+<div onclick="show('   3 minutes')" >3 minutes</div>
+<div onclick="show('   5 minutes')" >5 minutes</div>
+<div onclick= "show('   10 minutes')" >10 minutes</div>
+</div>
+</div>
+
+
+<!-- checkboxes for charset in game -->
+<div id="charset">
+  <img src="strzałka.png" id="arrow" class="arrow">
+  <p class="helph" id="checkboxh" style="">choose what type of signs you want to <br>
+  use in the test small letters, capital   <br>letters,
+   numbers and/or special signs </p>
+<!-- normal letters check -->
+<div>
+<label for="cka">a</label>
+<input type="checkbox" id="cka" class="ck" checked>
+</div>
+<!-- capital letters check -->
+<div>
+<label for="ckB">A</label>
+<input type="checkbox" id="ckB" class="ck">
+</div>
+<!-- numbers check -->
+<div>
+<label for="ck1">1</label>
+<input type="checkbox" id="ck1" class="ck">
+</div>
+<!-- special characters check -->
+<div>
+<label for="ck">#</label>
+<input type="checkbox" id="ck" class="ck">
+</div>
+
+</div>
+
+
+<!-- about popup -->
+<footer onclick="remove()">
+  <p class="helph" id="footerh" style=""> get more informations on developing this game here </p>
+<!-- show popup btn -->
+<button id="footer" onclick="showCard();" style="" >i</button>
+<!-- popup container -->
+<div id="card" class="card" style="">
+  <h1 id="KS">współtwórca: Jakub Stopa</h1>
+  <!-- close popup btn -->
+  <button  id="close" onclick="hide()">x</button>
+</div>
+
+</footer>
+
+<!-- menu -->
+<menu>
+  <p class="helph" id="menuh" style="">Here you have leaderboard, help and settings. </p>
+<!-- leaderboard popup -->
+  <button class="menu" id="board" onclick="menu1()">L</button>
+  <div id="boardw" style="" class="menuw">
+  </div>
+
+<!-- help popup -->
+  <button class="menu" id="help" onclick="menu2()">?</button>
+  <div id="helpw" style="" class="menuw">
+
+
+
+
+
+  </div>
+
+<!-- settings pop -->
+<button class="menu" id="settings" onclick="menu3()">S</button>
+<div id="setw" style="" class="menuw">
+</div>
+
+</menu>
+
+<!-- start game btn -->
+<div id="gma">
+  <p class="helph" id="starth" style="">click here to star a game </p>
+<!--<a href="game.html">--><button id="start" onclick="abc()">Start</button> </a>
+</div>
+
+<!-- frame for higher resolution screen-->
+<div class="h"> </div>
+
+<script type="text/javascript">
+
+
+  /* leaderboard variable */
+let x = document.getElementById('boardw');
+/* help popup variable*/
+  let y = document.getElementById('helpw');
+  /* settings popup variable*/
+  let z = document.getElementById('setw');
+  /* help button variable*/
+  let a = document.getElementById('help');
+  /* dropdown container variable*/
+  let dropdown = document.getElementById('dropdown');
+
+  let menuh = document.getElementById('menuh');
+  let dropdownh = document.getElementById('dropdownh');
+let checkboxh = document.getElementById('checkboxh');
+let starth = document.getElementById('starth');
+let footerh = document.getElementById('footerh');
+let arrow = document.getElementById('arrow');
+localStorage.setItem('all', "");
+
+
+/* footer popup display none*/
+document.getElementById('card').style = "display: none;";
+
+/* variable test */
+console.log(x);
+
+/* show footer popup */
+function showCard(){
+  document.getElementById('card').style = "display: block;";
+  document.getElementById('footer').style = "display: none;";
+}
+/* hide footer popup */
+function hide(){
+  document.getElementById('card').style = "display: none;";
+  document.getElementById('footer').style = "display: block;";
+}
+
+/* choose time in dropdown function */
+function show(anything) {
+
+document.getElementById('txt').value = anything;
+}
+
+/* show options in dropdown */
+dropdown.onclick = function(){
+  dropdown.classList.toggle('active');
+}
+/* show leaderboard function*/
+function menu1(){
+
+  x.classList.toggle('active');
+}
+/* show help popup function*/
+function menu2(){
+menuh.classList.toggle('active');
+dropdownh.classList.toggle('active');
+checkboxh.classList.toggle('active');
+starth.classList.toggle('active');
+footerh.classList.toggle('active');
+arrow.classList.toggle('active');
+
+  y.classList.toggle('active');
+  a.classList.toggle('active');
+
+}
+/* show settings function*/
+function menu3(){
+
+  z.classList.toggle('active');
+}
+
+/* hide popups function*/
+function remove() {
+  y.classList.remove('active');
+  z.classList.remove('active');
+  x.classList.remove('active');
+  dropdown.classList.remove('active');
+  localStorage.setItem('all', "");
+
+}
+
+</script>
+
+</body>
+</html>
