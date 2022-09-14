@@ -10,13 +10,34 @@ font: #666666;
 .dropdown{
   position: relative;
   top: 30%;
-  width: 400px;
+  width: fit-content;
   height: 60px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   z-index: 200000;
 
+}
+
+
+
+.option:hover{
+  border: black 2px solid;
+}
+
+#txt:hover~.option{
+  border: black 2px solid;
+}
+
+
+
+#txt:hover{
+  width: 410px;
+height: 75px;
+border-radius: 42px;
+top: -1%;
+border: black 2px solid;
+top: -5%;
 }
 
 #KS{
@@ -86,6 +107,10 @@ font-size: 1.4em;
   background-color: #E6E6E6;
 }
 
+.dropdown.active:hover #txt{
+  border: black 2px solid;
+}
+
 #charset{
   position: relative;
   margin-left: auto;
@@ -109,17 +134,23 @@ input.ck{
   box-shadow: 0 5px 20px rgba(0,0,0,0.17);
 accent-color: rgba(0,0,0,0.17);
 }
+
+#ck:hover{
+  transform: scale(3);
+}
+
 a{
   position: relative;
 
 }
 #gma{
   position: relative;
-  height: 70px;
-  width: 400px;
-  top: 40%;
-  margin-left: auto;
-  margin-right: auto;
+  top: 38%;
+ width: fit-content;
+ margin-left: auto;
+ margin-right: auto;
+ height: 80px;
+  
 }
 #start{
 
@@ -129,26 +160,37 @@ a{
 
   width: 400px;
   height: 70px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+ 
+position: relative;
+margin-left: auto;
+margin-right: auto;
+
 box-shadow: 0 5px 20px rgba(0,0,0,0.17);
 border: none;
 font-size: 1.7em;
 z-index: 100000;
 
+top: 0%;
+
+
 
 
 }
 #start:hover{
-  top: 39%;
+  
+width: 430px;
 height: 80px;
-width: 430px
+border-radius: 42px;
+top: -5%;
+border: black 2px solid;
+
+
 }
+
 #start:focus{
-  top: 41%;
-  width: 370px;
-  height: 60px;
+  
+  width: 390px;
+  height: 70px;
 }
 a{
   text-decoration: none;
@@ -159,6 +201,11 @@ footer{
   left: 0;
   height: 99.9vh;
   width: 100vw;
+}
+#footer:hover{
+  border: black 2px solid;
+  height: 70px;
+  width: 70px;
 }
 #footer{
   position: absolute;
@@ -271,6 +318,14 @@ width: 98vw;
   z-index: 3000000;
 }
 
+.menu:hover{
+  height: 60px;
+  width: 60px;
+  top: -5px;
+  border: black 2px solid;
+
+}
+
 .helph{
   display: none
 }
@@ -334,7 +389,7 @@ height: 80vh;
 @media (max-width: 1150px) {
 
   #starth{
-top: -75%;
+top: 75%;
 left: 23%;
 
   }
